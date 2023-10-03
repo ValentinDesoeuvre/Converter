@@ -1,7 +1,15 @@
 import './Currencies.scss';
 
+interface Currency {
+  name: string;
+  rate: number;
+}
 
-function Currencies( {currenciesData} ) {
+interface CurrenciesProps {
+  currenciesData: Currency[];
+}
+
+function Currencies( {currenciesData}: CurrenciesProps ) {
   const currienciesList = currenciesData.map((currency) => (
     <li key={currency.name} className="currencies-list-item">
       {currency.name}
