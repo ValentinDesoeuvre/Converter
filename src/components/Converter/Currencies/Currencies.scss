@@ -1,0 +1,29 @@
+@use '../../../styles/variables' as v;
+
+.currencies {
+  background: v.$color-lightest;
+  flex-grow: 1;
+  overflow-y: scroll;
+  
+  &-title {
+    font-weight: 700;
+    padding: v.$gutter/2;
+  }
+
+  &-list{
+    padding: 0;
+    
+    &-item {
+      border-bottom: solid v.$color 1px;
+      font-weight: 500;
+      padding: v.$gutter/2;
+      transition: v.$delay-fast ;
+      
+      &:hover {
+        background: v.$color-alt;
+        cursor: pointer;
+        transition: v.$delay-slow ;
+      }
+    }
+  }
+}

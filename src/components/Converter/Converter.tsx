@@ -8,7 +8,7 @@ import Result from './Result/Result';
 
 function Converter() {
   return (
-    <div className="Converter">
+    <div className="converter">
       <Header />
       <Currencies currenciesData={currenciesData}/>
       <Result />

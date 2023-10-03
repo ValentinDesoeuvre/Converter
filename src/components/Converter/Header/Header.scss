@@ -1,0 +1,12 @@
+@use '../../../styles/variables' as v;
+
+.header {
+  background: v.$color;
+  color: v.$color-lightest;
+  padding: v.$gutter;
+  text-align: center;
+
+  &-title {
+    font-weight: 700;
+  }
+}

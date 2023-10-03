@@ -1,0 +1,17 @@
+@use '../../../styles/variables' as v;
+
+.result {
+  background: v.$color-lightest;
+  color: v.$color;
+  padding: v.$gutter;
+  text-align: center;
+
+  &-rate {
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  &-currency {
+    font-size: 1.5em;
+  }
+}

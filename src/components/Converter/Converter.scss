@@ -1,38 +1,19 @@
 @use '../../styles/variables' as v;
 
-.Converter {
-	text-align: center;
-
-	&-logo {
-		height: 40vmin;
-		pointer-events: none;
-
-		@media (prefers-reduced-motion: no-preference) {
-			animation: Converter-logo-spin infinite 20s linear;
-		}
-	}
-
-	&-header {
-		background-color: v.$color-bg;
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		font-size: calc(10px + 2vmin);
-		color: v.$color;
-	}
-
-	&-link {
-		color: v.$color-primary;
-	}
-}
-
-@keyframes Converter-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+.converter {
+  /*
+    on fixe la hauteur à 90 % de son parent
+    (il sera centré automatiquement grâce au flexbox appliqué sur son parent)
+    on se sert de `display: flex`
+      pour « empiler les enfants » en colonne
+  */
+  background: v.$color-alt;
+  color: v.$color;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  margin: v.$gutter;
+  max-width: 480px;
+  padding: v.$gutter;
+  width: 90vw;
 }
