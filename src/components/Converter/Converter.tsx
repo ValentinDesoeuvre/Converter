@@ -1,26 +1,17 @@
-import logo from '../../assets/logo.svg';
-
 import './Converter.scss';
+
+import currenciesData from '../../data/currencies';
+
+import Currencies from './Currencies/Currencies';
+import Header from './Header/Header';
+import Result from './Result/Result';
 
 function Converter() {
   return (
     <div className="Converter">
-      <header className="Converter-header">
-        <img src={logo} className="Converter-logo" alt="logo" />
-
-        <p>
-          Edit <code>src/components/Converter/Converter.tsx</code> and save to reload.
-        </p>
-
-        <a
-          className="Converter-link"
-          href="https://react.dev/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Currencies />
+      <Result />
     </div>
   );
 }
