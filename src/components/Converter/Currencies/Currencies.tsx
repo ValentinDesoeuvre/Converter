@@ -1,13 +1,18 @@
 import './Currencies.scss';
 
-function Currencies() {
+
+function Currencies( {currenciesData} ) {
+  const currienciesList = currenciesData.map((currency) => (
+    <li key={currency.name} className="currencies-list-item">
+      {currency.name}
+    </li>
+  ));
+
   return (
     <div className="currencies">
       <h2 className='currencies-title'>Currencies</h2>
       <ul className="currencies-list">
-        <li className="currencies-list-item">Currency 1</li>
-        <li className="currencies-list-item">Currency 2</li>
-        <li className="currencies-list-item">Currency 3</li>
+        {currienciesList}
       </ul>
     </div>
   );

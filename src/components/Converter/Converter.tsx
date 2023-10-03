@@ -10,7 +10,7 @@ function Converter() {
   return (
     <div className="Converter">
       <Header />
-      <Currencies />
+      <Currencies currenciesData={currenciesData}/>
       <Result />
     </div>
   );
