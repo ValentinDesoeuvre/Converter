@@ -2,8 +2,9 @@ import './Result.scss';
 
 function Result() {
   return (
-    <div className="Result">
-      Result
+    <div className="result">
+      <p className="result-value">1.09</p>
+      <p className="result-currency">United States Dollar</p>
     </div>
   );
 }
