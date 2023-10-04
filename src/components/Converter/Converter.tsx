@@ -14,7 +14,7 @@ function Converter() {
     <div className="converter">
       <Header />
       <Currencies currenciesData={currenciesData} setCurrency={setCurrency}/>
-      <Result />
+      <Result currency={currency}/>
     </div>
   );
 }

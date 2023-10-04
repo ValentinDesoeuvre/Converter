@@ -1,11 +1,15 @@
 import { Currency } from '../../../interfaces';
 import './Result.scss';
 
-function Result() {
+interface ResultProps {
+  currency: Currency;
+}
+
+function Result( {currency}: ResultProps ) {
   return (
     <div className="result">
-      <p className="result-rate">1.09</p>
-      <p className="result-currency">United States Dollar</p>
+      <p className="result-rate">{currency.rate}</p>
+      <p className="result-currency">{currency.name}</p>
     </div>
   );
 }
