@@ -7,11 +7,20 @@ interface Currency {
 
 interface CurrenciesProps {
   currenciesData: Currency[];
+  setCurrency: React.Dispatch<React.SetStateAction<Currency>>;
 }
 
-function Currencies( {currenciesData}: CurrenciesProps ) {
+function Currencies( {currenciesData, setCurrency}: CurrenciesProps ) {
+  function handleClick(currency: Currency) {
+    setCurrency(currency);
+  }
+
   const currienciesList = currenciesData.map((currency) => (
-    <li key={currency.name} className="currencies-list-item">
+    <li 
+      key={currency.name} 
+      className="currencies-list-item" 
+      onClick={() => handleClick(currency)}
+    >
       {currency.name}
     </li>
   ));
@@ -27,3 +36,4 @@ function Currencies( {currenciesData}: CurrenciesProps ) {
 }
 
 export default Currencies;
+
