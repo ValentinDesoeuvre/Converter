@@ -8,7 +8,7 @@ interface ResultProps {
 function Result( {currency}: ResultProps ) {
   return (
     <div className="result">
-      <p className="result-rate">{currency.rate}</p>
+      <p className="result-rate">{currency.rate.toFixed(2)}</p>
       <p className="result-currency">{currency.name}</p>
     </div>
   );
