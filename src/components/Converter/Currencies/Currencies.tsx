@@ -1,9 +1,5 @@
+import { Currency } from '../../../interfaces';
 import './Currencies.scss';
-
-interface Currency {
-  name: string;
-  rate: number;
-}
 
 interface CurrenciesProps {
   currenciesData: Currency[];

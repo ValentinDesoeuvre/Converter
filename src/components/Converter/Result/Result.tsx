@@ -1,3 +1,4 @@
+import { Currency } from '../../../interfaces';
 import './Result.scss';
 
 function Result() {
