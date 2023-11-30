@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 import { Currency } from '../../../interfaces';
+import Searchbar from './Searchbar/Searchbar';
+
 import './Currencies.scss';
 
 interface CurrenciesProps {
@@ -7,11 +11,20 @@ interface CurrenciesProps {
 }
 
 function Currencies( {currenciesData, setCurrency}: CurrenciesProps ) {
+  const [search, setSearch] = useState('');
+  
   function handleClick(currency: Currency) {
     setCurrency(currency);
   }
 
-  const currienciesList = currenciesData.map((currency) => (
+  const filteredCurrencies = currenciesData.filter((currency) => {
+    if(!search.trim().length){
+      return true;
+    }
+    return currency.name.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase());
+  })
+
+  const currienciesList = filteredCurrencies.map((currency) => (
     <li 
       key={currency.name} 
       className="currencies-list-item" 
@@ -23,7 +36,8 @@ function Currencies( {currenciesData, setCurrency}: CurrenciesProps ) {
 
   return (
     <div className="currencies">
-      <h2 className='currencies-title'>Currencies</h2>
+      {/* <h2 className='currencies-title'>Currencies</h2> */}
+      <Searchbar search={search} setSearch={setSearch}/>
       <ul className="currencies-list">
         {currienciesList}
       </ul>

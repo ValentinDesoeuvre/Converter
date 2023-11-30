@@ -7,7 +7,11 @@
   
   &-title {
     font-weight: 700;
-    padding: v.$gutter/2;
+    padding: calc(v.$gutter/2);
+  }
+
+  &-title {
+    border-bottom: solid 1px;
   }
 
   &-list{

@@ -1,0 +1,43 @@
+@use '../../../../styles/variables' as v;
+
+.currencies-searchbar {
+  border-width: 0 0 3px;
+  border-color: v.$color;
+  color: v.$color;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: calc(v.$gutter/2);
+  width: 100%;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: v.$color;
+    font-weight: 300;
+  }
+
+  // Pour modifier la croix du type search
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+
+    // %23 → #
+    // `str-slice('string', 2)` → 'tring' // commence au 2ème caractère
+    // ici on retire le `#`
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23' + str-slice(
+        '#{v.$color-alt}',
+        2
+      ) + '"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>');
+    cursor: pointer;
+    height: 1.7rem;
+    width: 1.7rem;
+
+    &:hover {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23' + str-slice(
+          '#{v.$color}',
+          2
+        ) + '"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>');
+    }
+  }
+}
