@@ -12,5 +12,19 @@
 
   &-amount {
     font-size: 1.5rem;
+
+    &__input {
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid v.$color-alt;
+      color: v.$color-alt;
+      display: inline-block;
+      margin-right: 1.6rem;
+      width: 3rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }

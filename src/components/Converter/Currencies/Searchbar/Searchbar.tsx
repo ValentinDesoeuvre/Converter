@@ -1,6 +1,6 @@
 import './Searchbar.scss';
 
-function Searchbar({search, setSearch}) {
+function Searchbar( {search, setSearch} ) {
   const handleChange = (event) => {
     setSearch(event.target.value);
   }

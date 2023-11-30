@@ -9,12 +9,13 @@ import Result from './Result/Result';
 
 function Converter() {
   const [currency, setCurrency] = useState(currenciesData[0]);
+  const [amount, setAmount] = useState(1);
 
   return (
     <div className="converter">
-      <Header />
+      <Header amount={amount} setAmount={setAmount}/>
       <Currencies currenciesData={currenciesData} setCurrency={setCurrency}/>
-      <Result currency={currency}/>
+      <Result currency={currency} amount={amount} />
     </div>
   );
 }
