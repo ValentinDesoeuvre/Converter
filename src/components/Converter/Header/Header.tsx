@@ -1,19 +1,18 @@
-import { useState } from 'react';
-
 import './Header.scss';
 
-function Header( {amount, setAmount} ) {
+function Header({ amount, setAmount }) {
+  // Gère le changement du montant à convertir
   const handleChange = (event) => {
     setAmount(event.target.value);
-  }
+  };
 
   return (
     <header className="header">
-      <h1 className="header-title">Header</h1>
+      <h1 className="header-title">Converter</h1>
       <p className="header-amount">
-        <input 
+        <input
           type="number"
-          placeholder="Amount" 
+          placeholder="Amount"
           aria-label="Amount"
           className="header-amount__input"
           min={1}

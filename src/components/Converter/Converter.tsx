@@ -13,8 +13,13 @@ function Converter() {
 
   return (
     <div className="converter">
-      <Header amount={amount} setAmount={setAmount}/>
-      <Currencies currenciesData={currenciesData} setCurrency={setCurrency}/>
+      {/* Affiche le titre et le montant modifiable à convertir */}
+      <Header amount={amount} setAmount={setAmount} />
+
+      {/* Affiche la liste des devises et la barre de recherche */}
+      <Currencies currenciesData={currenciesData} setCurrency={setCurrency} />
+
+      {/* Affiche le résultat de la conversion */}
       <Result currency={currency} amount={amount} />
     </div>
   );

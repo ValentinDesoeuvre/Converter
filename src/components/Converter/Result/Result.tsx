@@ -6,7 +6,7 @@ interface ResultProps {
   amount: number;
 }
 
-function Result( {currency, amount}: ResultProps ) {
+function Result({ currency, amount }: ResultProps) {
   return (
     <div className="result">
       <p className="result-rate">{(amount * currency.rate).toFixed(2)}</p>
